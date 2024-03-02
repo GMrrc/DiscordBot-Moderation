@@ -129,7 +129,6 @@ client.on(Events.MessageCreate, async (message) => {
     if (banned) {
       await message.delete();
 
-      const messageReturn = Utils.toEmbed('Banned Word', 'Your message has been deleted because it contained a banned word', 0xff0000);
       await message.author.send({ embeds: [banEmbed] });
 
       console.log(`core.MessageCreate (BAN_TRIGGER_SUCCESS) - deleted message from ${message.author.id} on guild ${message.guild.id}`);
@@ -141,6 +140,14 @@ client.on(Events.MessageCreate, async (message) => {
   try {
 
     const guildId = message.guild.id;
+    const userId = message.author.id;
+
+    const isSpam = userSpamManager.checkSpam(userId, guildId);
+
+    if (isSpam) {
+      return;
+    }
+
     const messagelentgth = message.content.length;
     const xp = messagelentgth + 10;
 

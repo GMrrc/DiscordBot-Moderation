@@ -176,6 +176,11 @@ async function execute(interaction, eventManager) {
       });
       return;
     });
+
+  await interaction.reply({
+    content: 'Event added!',
+    ephemeral: true
+  });
 }
 
 
