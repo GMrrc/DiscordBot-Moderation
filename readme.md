@@ -49,6 +49,6 @@ Verify that your Discord bot possesses the required permissions within your serv
 
 ### Author's Note
 
-The development and maintenance of this bot have been carried out by Aorou. For inquiries or further information, please contact Aorou via [contact@aorou.com](mailto:guillaume.marrec.frey@proton.me).
+The development and maintenance of this bot have been carried out by Aorou. For inquiries or further information, please contact Aorou via [guillaume.marrec.frey@proton.me](mailto:guillaume.marrec.frey@proton.me).
 
 Feel free to explore, contribute, and tailor the bot to your requirements! For any issues or suggestions, kindly open an issue on the GitHub repository.
